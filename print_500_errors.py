@@ -22,5 +22,5 @@ for file in files:
       logRowDate = datetime.datetime.strptime(d, "%d/%m/%Y:%H:%M:%S")
       # compare to current datetime
       if logRowDate >= currentDatetime - datetime.timedelta(600) and logRowDate <= currentDatetime: # and logRowDate <= '2017/11/09-23:00:13':
-        # print line if criteria is met
-        print line
+        # since criteria is met, print request error
+        print line.split("]")[4]
